@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1e1e1e">
+  <meta name="description" content="Jordi Badia Santaulària — Senior Software Engineer. Perfil personal a teracat.com.">
+  <title>teracat.com — Jordi Badia Santaulària</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="ide-window">
+    <header class="titlebar">
+      <a class="site-title" href="#top">teracat<span>.com</span></a>
+      <div class="window-title"><span class="csharp-icon">C#</span> Jordi Badia Santaulària (Teracat)</div>
+      <div class="window-controls">
+        <button class="window-control maximize-control" type="button" aria-label="Maximize window" aria-pressed="false" data-i18n-aria="window.maximize">
+          <svg class="maximize-icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="3" width="10" height="10" rx=".5"/></svg>
+          <svg class="restore-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 5V3h8v8h-2"/><rect x="3" y="5" width="8" height="8" rx=".5"/></svg>
+        </button>
+        <button class="window-control close-control" type="button" aria-label="Close window" data-i18n-aria="window.close">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 4 8 8M12 4l-8 8"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <nav class="menubar" aria-label="Menú principal" data-i18n-aria="menu.aria">
+      <div class="menu-items">
+        <div class="menu-group">
+          <button class="menu-trigger" type="button" aria-expanded="false" data-i18n="menu.file">File</button>
+          <div class="menu-dropdown" role="menu">
+            <button type="button" role="menuitem" data-view="home"><span data-i18n="menu.home">Home</span><small data-i18n="filename.home">Home.cs</small></button>
+            <button type="button" role="menuitem" data-view="about"><span data-i18n="menu.about">About</span><small data-i18n="filename.about">About.cs</small></button>
+          </div>
+        </div>
+        <div class="menu-group">
+          <button class="menu-trigger" type="button" aria-expanded="false" data-i18n="menu.go">Go</button>
+          <div class="menu-dropdown" role="menu">
+            <a role="menuitem" href="https://www.linkedin.com/in/jordi-badia-santaularia/" target="_blank" rel="noopener noreferrer">LinkedIn <small>↗</small></a>
+            <a role="menuitem" href="https://github.com/teracat" target="_blank" rel="noopener noreferrer">GitHub <small>↗</small></a>
+          </div>
+        </div>
+        <div class="menu-group">
+          <button class="menu-trigger" type="button" aria-expanded="false" data-i18n="menu.language">Language</button>
+          <div class="menu-dropdown language-dropdown" role="menu" aria-label="Language" data-i18n-aria="menu.language">
+            <button type="button" role="menuitemradio" aria-checked="false" data-language="ca">Català <small></small></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-language="es">Español <small></small></button>
+            <button type="button" role="menuitemradio" aria-checked="false" data-language="en">English <small></small></button>
+          </div>
+        </div>
+      </div>
+      <span class="workspace-name" data-i18n="workspace">TERACAT — PERSONAL</span>
+    </nav>
+
+    <div class="workbench" id="top">
+      <aside class="explorer" aria-label="Me" data-i18n-aria="me.title">
+        <div class="explorer-heading">
+          <span class="explorer-label" data-i18n="me.title">ME</span>
+          <button class="explorer-toggle" type="button" aria-expanded="true" aria-label="Collapse explorer" data-i18n-aria="me.collapseExplorer"><span aria-hidden="true">‹</span></button>
+        </div>
+        <div class="tree-content">
+          <div class="tree-branch">
+            <button class="tree-folder tree-parent" type="button" aria-expanded="true" aria-controls="tree-name"><span class="chevron">⌄</span><span data-i18n="me.name">Name</span></button>
+            <div class="tree-children" id="tree-name"><div class="tree-item indent-1" data-i18n="me.fullName">Jordi Badia Santaulària</div></div>
+          </div>
+          <div class="tree-branch">
+            <button class="tree-folder tree-parent" type="button" aria-expanded="true" aria-controls="tree-location"><span class="chevron">⌄</span><span data-i18n="me.location">Location</span></button>
+            <div class="tree-children" id="tree-location"><div class="tree-item indent-1" data-i18n="me.locationValue">Santpedor, Barcelona (Spain)</div></div>
+          </div>
+          <div class="tree-branch">
+            <button class="tree-folder tree-parent" type="button" aria-expanded="true" aria-controls="tree-experience"><span class="chevron">⌄</span><span data-i18n="me.experience">Experience</span></button>
+            <div class="tree-children" id="tree-experience">
+              <div class="tree-branch">
+                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="true" aria-controls="tree-role-1"><span class="chevron">⌄</span><span data-i18n="me.role1">Senior Software Engineer</span></button>
+                <div class="tree-children" id="tree-role-1"><div class="tree-item indent-2" data-i18n="me.role1.company">Carts CW [May 2026..Present]</div><div class="tree-item indent-2" data-i18n="me.role1.details">Full Time · On-Site [Manresa]</div></div>
+              </div>
+              <div class="tree-branch">
+                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="true" aria-controls="tree-role-2"><span class="chevron">⌄</span><span data-i18n="me.role2">IT Project Manager &amp; Technical Lead</span></button>
+                <div class="tree-children" id="tree-role-2"><div class="tree-item indent-2" data-i18n="me.role2.company">Endepro Software [June 2018..Apr 2026]</div><div class="tree-item indent-2" data-i18n="me.role2.details">Partial Time · On-Site [Manresa]</div></div>
+              </div>
+              <div class="tree-branch">
+                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="true" aria-controls="tree-role-3"><span class="chevron">⌄</span><span data-i18n="me.role3">Software analysis &amp; development</span></button>
+                <div class="tree-children" id="tree-role-3"><div class="tree-item indent-2" data-i18n="me.role3.company">Endepro Software [June 2018..Apr 2026]</div><div class="tree-item indent-2" data-i18n="me.role3.details">Partial Time · On-Site [Manresa]</div></div>
+              </div>
+              <div class="tree-branch">
+                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="true" aria-controls="tree-role-4"><span class="chevron">⌄</span><span data-i18n="me.role4">Freelance Software Engineer</span></button>
+                <div class="tree-children" id="tree-role-4"><div class="tree-item indent-2" data-i18n="me.role4.company">Teracat [May 2004..Apr 2026]</div><div class="tree-item indent-2" data-i18n="me.role4.details">Partial Time · Remote</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="tree-branch">
+            <button class="tree-folder tree-parent" type="button" aria-expanded="true" aria-controls="tree-projects"><span class="chevron">⌄</span><span data-i18n="me.projects">Personal Projects</span></button>
+            <div class="tree-children" id="tree-projects">
+              <div class="tree-project-row indent-1"><span class="tree-item project-item">Deve .NET Template</span><a class="project-link" href="https://github.com/teracat/Deve" target="_blank" rel="noopener noreferrer" aria-label="Open Deve .NET Template on GitHub" data-i18n-aria="me.projectLink"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 2h8v8h-2V5.4l-7.3 7.3-1.4-1.4L10.6 4H6V2Z"/><path d="M12 12v2H2V4h2v8h8Z"/></svg></a></div>
+              <div class="tree-item indent-1 project-item">ComprarBio</div>
+              <div class="tree-item indent-1 project-item">ecoLugares</div>
+              <div class="tree-item indent-1 project-item">medicum</div>
+            </div>
+          </div>
+          <div class="tree-branch">
+            <button class="tree-folder tree-parent" type="button" aria-expanded="true" aria-controls="tree-skills"><span class="chevron">⌄</span><span data-i18n="me.skills">Skills</span></button>
+            <div class="tree-children" id="tree-skills">
+              <div class="tree-item indent-1">.NET C#</div><div class="tree-item indent-1">Entity Framework</div><div class="tree-item indent-1">MAUI · Xamarin</div><div class="tree-item indent-1">SQL</div><div class="tree-item indent-1">Git</div><div class="tree-item indent-1">Azure</div>
+            </div>
+          </div>
+          <div class="tree-branch">
+            <button class="tree-folder tree-parent" type="button" aria-expanded="true" aria-controls="tree-education"><span class="chevron">⌄</span><span data-i18n="me.education">Education</span></button>
+            <div class="tree-children" id="tree-education">
+              <div class="tree-branch">
+                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="true" aria-controls="tree-degree-1"><span class="chevron">⌄</span><span data-i18n="me.degree1">Master in e-Business Technologies</span></button>
+                <div class="tree-children" id="tree-degree-1"><div class="tree-item indent-2" data-i18n="me.degree1Note">Mainly Oracle and Java</div></div>
+              </div>
+              <div class="tree-item indent-1" data-i18n="me.degree2">Technical Eng. in Computer Systems</div>
+            </div>
+          </div>
+        </div>
+        <div class="explorer-footer"><span class="orange-dot"></span><span data-i18n="me.footer">Personal profile</span></div>
+      </aside>
+
+      <main class="editor" id="editor">
+        <div class="tab-strip">
+          <button class="tab active-tab" type="button" data-tab="home"><span class="file-icon">C#</span><span data-i18n="filename.home">Home.cs</span></button>
+          <button class="tab about-tab" type="button" data-tab="about"><span class="file-icon">C#</span><span data-i18n="filename.about">About.cs</span></button>
+        </div>
+        <div class="breadcrumbs"><span>Teracat</span><span class="crumb-sep">›</span><span data-i18n="breadcrumb.profile">Profile</span><span class="crumb-sep">›</span><span class="crumb-current" data-breadcrumb>Home</span></div>
+
+        <section class="code-view" aria-label="C# code editor">
+          <div class="code-lines code-home" data-panel="home">
+            <div class="line"><span class="kw">using</span> <span class="ns">Software.Analysis</span>;</div>
+            <div class="line"><span class="kw">using</span> <span class="ns">Software.Development</span>;</div>
+            <div class="line"><span class="kw">using</span> <span class="ns">Software.Dessign.Basics</span>;</div>
+            <div class="line"><span class="kw">using</span> <span class="ns">Software.Client.Communication</span>;</div>
+            <div class="line"><span class="kw">using</span> <span class="ns">Software.Client.Requirements</span>;</div>
+            <div class="line"><span class="kw">using</span> <span class="ns">Software.Experience</span>;</div>
+            <div class="line"><span class="kw">using</span> <span class="ns">Software.Project.Management</span>;</div>
+            <div class="line blank"></div>
+            <div class="line"><span class="kw">namespace</span> <span class="ns" data-code="namespace">Teracat.Profile</span>;</div>
+            <div class="line blank"></div>
+            <div class="summary-lines" data-home-summary></div>
+            <div class="line blank"></div>
+            <div class="line"><span class="kw">if</span> (<span class="type" data-code="currentUser">CurrentUser</span>.<span class="prop" data-code="wantsMoreInfo">WantsMoreInfo</span>)</div>
+            <div class="line brace">{</div>
+            <div class="line indent-1"><span class="type" data-code="goTo">GoTo</span>.<span class="method">LinkedIn</span>(<a class="str" href="https://www.linkedin.com/in/jordi-badia-santaularia/" target="_blank" rel="noopener noreferrer">"https://www.linkedin.com/in/jordi-badia-santaularia/"</a>);</div>
+            <div class="line brace">}</div>
+            <div class="line blank"></div>
+            <div class="line"><span class="kw">if</span> (<span class="type" data-code="currentUser">CurrentUser</span>.<span class="prop" data-code="wantsToSeeCode">WantsToSeeCode</span>)</div>
+            <div class="line brace">{</div>
+            <div class="line indent-1"><span class="type" data-code="goTo">GoTo</span>.<span class="method">GitHub</span>(<a class="str" href="https://github.com/teracat" target="_blank" rel="noopener noreferrer">"https://github.com/teracat"</a>);</div>
+            <div class="line brace">}</div>
+          </div>
+          <div class="code-lines code-about" data-panel="about" hidden></div>
+          <div class="minimap" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </section>
+        <div class="statusbar"><span class="status-left"><b>⎇</b> <span data-i18n="status.branch">main</span> &nbsp; <b>✓</b> <span data-i18n="status.issues">No issues</span></span><span class="status-right"><span data-i18n="status.line">Ln</span> 1, <span data-i18n="status.column">Col</span> 1 &nbsp; · &nbsp; <span data-i18n="status.spaces">Spaces</span>: 4 &nbsp; · &nbsp; UTF-8 &nbsp; · &nbsp; C#</span></div>
+      </main>
+    </div>
+    <footer class="page-footer"><span>teracat.com</span><span class="footer-credit" data-i18n="footer.credit">Ho reconec, he creat aquesta web amb l'ajuda de ChatGPT</span><span>© <span data-year></span> Jordi Badia Santaulària</span></footer>
+  </div>
+  <div class="closed-screen" data-close-screen hidden role="dialog" aria-modal="true" aria-labelledby="closed-screen-title">
+    <div class="closed-card">
+      <div class="closed-brand" id="closed-screen-title">teracat<span>.com</span></div>
+      <button class="open-window" type="button" data-i18n="window.open">Obrir</button>
+    </div>
+  </div>
+</body>
+</html>
