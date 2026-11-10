@@ -8,6 +8,8 @@ const translations = {
     "me.role2": "Gestor de projectes IT i responsable tècnic", "me.role2.company": "Endepro Software [juny 2018..abr 2026]", "me.role2.details": "Jornada parcial · Presencial [Manresa]",
     "me.role3": "Anàlisi i desenvolupament de programari", "me.role3.company": "Endepro Software [juny 2018..abr 2026]", "me.role3.details": "Jornada parcial · Presencial [Manresa]",
     "me.role4": "Enginyer de programari autònom", "me.role4.company": "Teracat [maig 2004..abr 2026]", "me.role4.details": "Jornada parcial · Remot",
+    "me.role5": "Desenvolupador de programari", "me.role5.company": "Xarxa Consultoria Informàtica [Jun 2002..May 2004]", "me.role5.details": "Jornada completa · Presencial [Manresa]",
+    "code.using.analysis": "Analisi", "code.using.development": "Desenvolupament", "code.using.design": "Disseny.Fonaments", "code.using.communication": "Client.Comunicacio", "code.using.requirements": "Client.Requisits", "code.using.experience": "Experiencia", "code.using.projectManagement": "Gestio.Projectes",
     "me.projects": "Projectes personals", "me.projectLink": "Obre Deve .NET Template a GitHub", "me.education": "Formació", "me.degree1": "Màster en Tecnologies d'e-Business", "me.degree1Note": "Principalment Oracle i Java", "me.degree2": "Enginyeria Tècnica en Informàtica de Sistemes", "me.skills": "Competències", "me.footer": "Perfil personal",
     "breadcrumb.profile": "Perfil", "breadcrumb.home": "Inici", "breadcrumb.about": "Sobre mi", "status.branch": "principal", "status.issues": "Cap incidència", "status.line": "Línia", "status.column": "Columna", "status.spaces": "Espais", "filename.home": "Inici.cs", "filename.about": "SobreMi.cs", "footer.credit": "Ho reconec, he creat aquesta web amb l'ajuda de ChatGPT",
     paragraphs: [
@@ -28,6 +30,8 @@ const translations = {
     "me.role2": "Responsable de proyectos de TI y líder técnico", "me.role2.company": "Endepro Software [junio 2018..abr 2026]", "me.role2.details": "Jornada parcial · Presencial [Manresa]",
     "me.role3": "Análisis y desarrollo de software", "me.role3.company": "Endepro Software [junio 2018..abr 2026]", "me.role3.details": "Jornada parcial · Presencial [Manresa]",
     "me.role4": "Ingeniero de software autónomo", "me.role4.company": "Teracat [mayo 2004..abr 2026]", "me.role4.details": "Jornada parcial · Remoto",
+    "me.role5": "Desarrollador de software", "me.role5.company": "Xarxa Consultoria Informàtica [Jun 2002..May 2004]", "me.role5.details": "Jornada completa · Presencial [Manresa]",
+    "code.using.analysis": "Analisis", "code.using.development": "Desarrollo", "code.using.design": "Diseno.Fundamentos", "code.using.communication": "Cliente.Comunicacion", "code.using.requirements": "Cliente.Requisitos", "code.using.experience": "Experiencia", "code.using.projectManagement": "Gestion.Proyectos",
     "me.projects": "Proyectos personales", "me.projectLink": "Abrir Deve .NET Template en GitHub", "me.education": "Formación", "me.degree1": "Máster en Tecnologías de e-Business", "me.degree1Note": "Principalmente Oracle y Java", "me.degree2": "Ingeniería Técnica en Informática de Sistemas", "me.skills": "Habilidades", "me.footer": "Perfil personal",
     "breadcrumb.profile": "Perfil", "breadcrumb.home": "Inicio", "breadcrumb.about": "Acerca de mí", "status.branch": "principal", "status.issues": "Sin incidencias", "status.line": "Lín.", "status.column": "Col.", "status.spaces": "Espacios", "filename.home": "Inicio.cs", "filename.about": "AcercaDeMi.cs", "footer.credit": "Lo reconozco, he creado esta web con la ayuda de ChatGPT",
     paragraphs: [
@@ -48,6 +52,8 @@ const translations = {
     "me.role2": "IT Project Manager & Technical Lead", "me.role2.company": "Endepro Software [June 2018..Apr 2026]", "me.role2.details": "Partial Time · On-Site [Manresa]",
     "me.role3": "Software analysis & development", "me.role3.company": "Endepro Software [June 2018..Apr 2026]", "me.role3.details": "Partial Time · On-Site [Manresa]",
     "me.role4": "Freelance Software Engineer", "me.role4.company": "Teracat [May 2004..Apr 2026]", "me.role4.details": "Partial Time · Remote",
+    "me.role5": "Software Developer", "me.role5.company": "Xarxa Consultoria Informàtica [Jun 2002..May 2004]", "me.role5.details": "Full Time · On-Site [Manresa]",
+    "code.using.analysis": "Analysis", "code.using.development": "Development", "code.using.design": "Dessign.Basics", "code.using.communication": "Client.Communication", "code.using.requirements": "Client.Requirements", "code.using.experience": "Experience", "code.using.projectManagement": "Project.Management",
     "me.projects": "Personal Projects", "me.projectLink": "Open Deve .NET Template on GitHub", "me.education": "Education", "me.degree1": "Master in e-Business Technologies", "me.degree1Note": "Mainly Oracle and Java", "me.degree2": "Technical Eng. in Computer Systems", "me.skills": "Skills", "me.footer": "Personal profile",
     "breadcrumb.profile": "Profile", "breadcrumb.home": "Home", "breadcrumb.about": "About", "status.branch": "main", "status.issues": "No issues", "status.line": "Ln", "status.column": "Col", "status.spaces": "Spaces", "filename.home": "Home.cs", "filename.about": "About.cs", "footer.credit": "I'll admit it, I created this website with the help of ChatGPT",
     paragraphs: [
@@ -326,6 +332,7 @@ try {
   currentLanguage = browserLanguage;
 }
 
+isWindowMaximized = window.matchMedia("(max-width: 1024px)").matches;
 setExplorerCollapsed(window.matchMedia("(max-width: 760px)").matches);
 applyLanguage(currentLanguage);
 window.matchMedia("(max-width: 760px)").addEventListener("change", (event) => {
