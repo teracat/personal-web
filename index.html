@@ -12,7 +12,7 @@
 <body>
   <div class="ide-window">
     <header class="titlebar">
-      <a class="site-title" href="#top">teracat<span>.com</span></a>
+      <a class="site-title" href="#top"><span>teracat</span>.com</a>
       <div class="window-title"><span class="csharp-icon">C#</span> Jordi Badia Santaulària (Teracat)</div>
       <div class="window-controls">
         <button class="window-control maximize-control" type="button" aria-label="Maximize window" aria-pressed="false" data-i18n-aria="window.maximize">
@@ -71,20 +71,20 @@
           <div class="tree-branch">
             <button class="tree-folder tree-parent" type="button" aria-expanded="true" aria-controls="tree-experience"><span class="chevron">⌄</span><span data-i18n="me.experience">Experience</span></button>
             <div class="tree-children" id="tree-experience">
-              <div class="tree-branch">
-                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="true" aria-controls="tree-role-1"><span class="chevron">⌄</span><span data-i18n="me.role1">Senior Software Engineer</span></button>
+              <div class="tree-branch is-collapsed">
+                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="false" aria-controls="tree-role-1"><span class="chevron">⌄</span><span data-i18n="me.role1">Senior Software Engineer</span></button>
                 <div class="tree-children" id="tree-role-1"><div class="tree-item indent-2" data-i18n="me.role1.company">Carts CW [May 2026..Present]</div><div class="tree-item indent-2" data-i18n="me.role1.details">Full Time · On-Site [Manresa]</div></div>
               </div>
-              <div class="tree-branch">
-                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="true" aria-controls="tree-role-2"><span class="chevron">⌄</span><span data-i18n="me.role2">IT Project Manager &amp; Technical Lead</span></button>
+              <div class="tree-branch is-collapsed">
+                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="false" aria-controls="tree-role-2"><span class="chevron">⌄</span><span data-i18n="me.role2">IT Project Manager &amp; Technical Lead</span></button>
                 <div class="tree-children" id="tree-role-2"><div class="tree-item indent-2" data-i18n="me.role2.company">Endepro Software [June 2018..Apr 2026]</div><div class="tree-item indent-2" data-i18n="me.role2.details">Partial Time · On-Site [Manresa]</div></div>
               </div>
-              <div class="tree-branch">
-                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="true" aria-controls="tree-role-3"><span class="chevron">⌄</span><span data-i18n="me.role3">Software analysis &amp; development</span></button>
+              <div class="tree-branch is-collapsed">
+                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="false" aria-controls="tree-role-3"><span class="chevron">⌄</span><span data-i18n="me.role3">Software analysis &amp; development</span></button>
                 <div class="tree-children" id="tree-role-3"><div class="tree-item indent-2" data-i18n="me.role3.company">Endepro Software [June 2018..Apr 2026]</div><div class="tree-item indent-2" data-i18n="me.role3.details">Partial Time · On-Site [Manresa]</div></div>
               </div>
-              <div class="tree-branch">
-                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="true" aria-controls="tree-role-4"><span class="chevron">⌄</span><span data-i18n="me.role4">Freelance Software Engineer</span></button>
+              <div class="tree-branch is-collapsed">
+                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="false" aria-controls="tree-role-4"><span class="chevron">⌄</span><span data-i18n="me.role4">Freelance Software Engineer</span></button>
                 <div class="tree-children" id="tree-role-4"><div class="tree-item indent-2" data-i18n="me.role4.company">Teracat [May 2004..Apr 2026]</div><div class="tree-item indent-2" data-i18n="me.role4.details">Partial Time · Remote</div></div>
               </div>
             </div>
@@ -107,11 +107,15 @@
           <div class="tree-branch">
             <button class="tree-folder tree-parent" type="button" aria-expanded="true" aria-controls="tree-education"><span class="chevron">⌄</span><span data-i18n="me.education">Education</span></button>
             <div class="tree-children" id="tree-education">
-              <div class="tree-branch">
-                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="true" aria-controls="tree-degree-1"><span class="chevron">⌄</span><span data-i18n="me.degree1">Master in e-Business Technologies</span></button>
-                <div class="tree-children" id="tree-degree-1"><div class="tree-item indent-2" data-i18n="me.degree1Note">Mainly Oracle and Java</div></div>
+              <div class="tree-branch is-collapsed">
+                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="false" aria-controls="tree-degree-1"><span class="chevron">⌄</span><span data-i18n="me.degree1">Master in e-Business Technologies</span></button>
+                <div class="tree-children" id="tree-degree-2"><div class="tree-item indent-2" data-i18n="me.degree1Note">Mainly Oracle and Java</div></div>
+                <div class="tree-children" id="tree-degree-1"><div class="tree-item indent-2" data-i18n="me.degree2Note">[2001..2002]</div></div>
               </div>
-              <div class="tree-item indent-1" data-i18n="me.degree2">Technical Eng. in Computer Systems</div>
+              <div class="tree-branch is-collapsed">
+                <button class="tree-item indent-1 tree-parent role-parent" type="button" aria-expanded="false" aria-controls="tree-degree-1"><span class="chevron">⌄</span><span data-i18n="me.degree2">Technical Eng. in Computer Systems</span></button>
+                <div class="tree-children" id="tree-degree-3"><div class="tree-item indent-2" data-i18n="me.degree3Note">[1998..2002]</div></div>
+              </div>
             </div>
           </div>
         </div>
@@ -159,7 +163,7 @@
   </div>
   <div class="closed-screen" data-close-screen hidden role="dialog" aria-modal="true" aria-labelledby="closed-screen-title">
     <div class="closed-card">
-      <div class="closed-brand" id="closed-screen-title">teracat<span>.com</span></div>
+      <div class="closed-brand" id="closed-screen-title"><span>teracat</span>.com</div>
       <button class="open-window" type="button" data-i18n="window.open">Obrir</button>
     </div>
   </div>
