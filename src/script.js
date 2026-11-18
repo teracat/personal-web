@@ -1,6 +1,6 @@
 const translations = {
   ca: {
-    "menu.aria": "Menú principal", "menu.file": "Fitxer", "menu.home": "Inici", "menu.about": "Sobre mi", "menu.go": "Vés a", "menu.language": "Llengua",
+    "menu.aria": "Menú principal", "menu.file": "Fitxer", "menu.home": "Inici", "menu.about": "Sobre mi", "menu.go": "Vés a", "menu.language": "Idioma",
     "window.maximize": "Maximitza la finestra", "window.restore": "Restaura la finestra", "window.close": "Tanca la finestra", "window.open": "Obrir",
     workspace: "TERACAT — PERSONAL", "code.namespace": "Teracat.Perfil", "code.currentUser": "UsuariActual", "code.wantsMoreInfo": "VolMesInformacio", "code.wantsToSeeCode": "VolVeureCodi", "code.goTo": "VesA", "home.summary.1": "Fa un temps vaig ser autònom durant molts anys i Teracat era el meu nom comercial.", "home.summary.2": "Per a més informació ves a", "me.title": "JO", "me.collapseExplorer": "Plega l'explorador", "me.expandExplorer": "Desplega l'explorador",
     "me.name": "Nom", "me.fullName": "Jordi Badia Santaulària", "me.location": "Ubicació", "me.locationValue": "Santpedor, Barcelona (Espanya)",
