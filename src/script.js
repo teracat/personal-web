@@ -1,6 +1,6 @@
 const translations = {
   ca: {
-    "menu.aria": "Menú principal", "menu.file": "Fitxer", "menu.home": "Inici", "menu.about": "Sobre mi", "menu.go": "Vés a", "menu.language": "Idioma",
+    "menu.aria": "Menú principal", "menu.file": "Fitxer", "menu.home": "Inici", "menu.about": "Sobre mi", "menu.go": "Vés a", "menu.language": "Idioma", "menu.theme": "Aspecte", "theme.dark": "Fosc", "theme.light": "Clar",
     "window.maximize": "Maximitza la finestra", "window.restore": "Restaura la finestra", "window.close": "Tanca la finestra", "window.open": "Obrir",
     workspace: "TERACAT — PERSONAL", "code.namespace": "Teracat.Perfil", "code.currentUser": "UsuariActual", "code.wantsMoreInfo": "VolMesInformacio", "code.wantsToSeeCode": "VolVeureCodi", "code.goTo": "VesA", "home.summary.1": "Fa un temps vaig ser autònom durant molts anys i Teracat era el meu nom comercial.", "home.summary.2": "Per a més informació ves a", "me.title": "JO", "me.collapseExplorer": "Plega l'explorador", "me.expandExplorer": "Desplega l'explorador",
     "me.name": "Nom", "me.fullName": "Jordi Badia Santaulària", "me.location": "Ubicació", "me.locationValue": "Santpedor, Barcelona (Espanya)",
@@ -22,7 +22,7 @@ const translations = {
     ]
   },
   es: {
-    "menu.aria": "Menú principal", "menu.file": "Archivo", "menu.home": "Inicio", "menu.about": "Acerca de mí", "menu.go": "Ir a", "menu.language": "Idioma",
+    "menu.aria": "Menú principal", "menu.file": "Archivo", "menu.home": "Inicio", "menu.about": "Acerca de mí", "menu.go": "Ir a", "menu.language": "Idioma", "menu.theme": "Aspecto", "theme.dark": "Oscuro", "theme.light": "Claro",
     "window.maximize": "Maximizar ventana", "window.restore": "Restaurar ventana", "window.close": "Cerrar ventana", "window.open": "Abrir",
     workspace: "TERACAT — PERSONAL", "code.namespace": "Teracat.Perfil", "code.currentUser": "UsuarioActual", "code.wantsMoreInfo": "QuiereMasInformacion", "code.wantsToSeeCode": "QuiereVerCodigo", "code.goTo": "IrA", "home.summary.1": "Hace un tiempo fui autónomo durante muchos años y Teracat era mi nombre comercial.", "home.summary.2": "Para más información, ve a", "me.title": "YO", "me.collapseExplorer": "Contraer el explorador", "me.expandExplorer": "Expandir el explorador",
     "me.name": "Nombre", "me.fullName": "Jordi Badia Santaulària", "me.location": "Ubicación", "me.locationValue": "Santpedor, Barcelona (España)",
@@ -44,7 +44,7 @@ const translations = {
     ]
   },
   en: {
-    "menu.aria": "Main menu", "menu.file": "File", "menu.home": "Home", "menu.about": "About", "menu.go": "Go", "menu.language": "Language",
+    "menu.aria": "Main menu", "menu.file": "File", "menu.home": "Home", "menu.about": "About", "menu.go": "Go", "menu.language": "Language", "menu.theme": "Theme", "theme.dark": "Dark", "theme.light": "Light",
     "window.maximize": "Maximize window", "window.restore": "Restore window", "window.close": "Close window", "window.open": "Open",
     workspace: "TERACAT — PERSONAL", "code.namespace": "Teracat.Profile", "code.currentUser": "CurrentUser", "code.wantsMoreInfo": "WantsMoreInfo", "code.wantsToSeeCode": "WantsToSeeCode", "code.goTo": "GoTo", "home.summary.1": "Some time ago, I was self-employed for many years, and Teracat was my trade name.", "home.summary.2": "For more information, go to", "me.title": "ME", "me.collapseExplorer": "Collapse explorer", "me.expandExplorer": "Expand explorer",
     "me.name": "Name", "me.fullName": "Jordi Badia Santaulària", "me.location": "Location", "me.locationValue": "Santpedor, Barcelona (Spain)",
@@ -73,6 +73,7 @@ const tabs = document.querySelectorAll("[data-tab]");
 const panels = document.querySelectorAll("[data-panel]");
 const breadcrumb = document.querySelector("[data-breadcrumb]");
 const languageOptions = document.querySelectorAll("[data-language]");
+const themeOptions = document.querySelectorAll("[data-theme-option]");
 const aboutPanel = document.querySelector('[data-panel="about"]');
 const explorer = document.querySelector(".explorer");
 const explorerToggle = document.querySelector(".explorer-toggle");
@@ -84,6 +85,17 @@ const reopenControl = document.querySelector(".open-window");
 let activeView = "home";
 let currentLanguage = "en";
 let isWindowMaximized = false;
+let currentTheme = "dark";
+
+function applyTheme(theme) {
+  currentTheme = theme;
+  document.documentElement.dataset.theme = theme;
+  for (const option of themeOptions) {
+    const selected = option.dataset.themeOption === theme;
+    option.setAttribute("aria-checked", String(selected));
+    option.querySelector("small").textContent = selected ? "✓" : "";
+  }
+}
 
 function closeMenus() {
   for (const group of menuGroups) {
@@ -291,6 +303,13 @@ for (const option of languageOptions) {
   });
 }
 
+for (const option of themeOptions) {
+  option.addEventListener("click", () => {
+    applyTheme(option.dataset.themeOption);
+    try { localStorage.setItem("teracat-theme", currentTheme); } catch { /* Storage is optional. */ }
+  });
+}
+
 explorerToggle.addEventListener("click", () => {
   setExplorerCollapsed(!explorer.classList.contains("is-collapsed"));
 });
@@ -332,8 +351,18 @@ try {
   currentLanguage = browserLanguage;
 }
 
+try {
+  const savedTheme = localStorage.getItem("teracat-theme");
+  currentTheme = savedTheme === "light" || savedTheme === "dark"
+    ? savedTheme
+    : (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+} catch {
+  currentTheme = "dark";
+}
+
 isWindowMaximized = window.matchMedia("(max-width: 1024px)").matches;
 setExplorerCollapsed(window.matchMedia("(max-width: 760px)").matches);
+applyTheme(currentTheme);
 applyLanguage(currentLanguage);
 window.matchMedia("(max-width: 760px)").addEventListener("change", (event) => {
   setExplorerCollapsed(event.matches);
